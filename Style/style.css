@@ -1,21 +1,9 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2? family= Comfortaa:wght@500;700 & display=swap');
-@import url('https://fonts.googleapis.com/css2? family= Spartan:wght@300;400;500 & display=swap');
-
-:root{
-    --fonte1: 'Comfortaa', cursive;
-    --fonte2:'Spartan', sans-serif;
-}
 
 *{
     margin: 0;
     padding: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-body{
-    background-image: url(/img/pexels-eberhard-grossgasteiger-1287145.jpg);
-    background-size: cover;
 }
 
 main{
@@ -67,14 +55,8 @@ main .textos{
 }
 
 form{
-    background-color: rgba(255, 255, 255, 0.208);
     width: 50%;
     padding: 4rem;
-    border: .5px solid rgba(255, 255, 255, 0.151);
-    border-radius: 15px;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0,37 );
 }
 
 main .textos h1{
@@ -83,6 +65,7 @@ main .textos h1{
     color: #161616;
     font-size: 3rem;
     font-weight: 700;
+    color: #000;
 }
 
 main .campos input, main .btn input{
@@ -97,6 +80,19 @@ main .campos input, main .btn input{
     border: none;
     outline: none;
     font-size: 1.2rem;
+    background: linear-gradient(145deg, #f0f0f0, #cacaca3d);
+    box-shadow:  5px 5px 19px #d3d3d34f,
+             -5px -5px 19px #ededed52;
+}
+
+a{
+    text-decoration: none;
+    color: #9d48ff;
+    text-align: center;
+}
+
+label{
+    color: #000;
 }
 
 #btn{
@@ -105,12 +101,6 @@ main .campos input, main .btn input{
     height: 40px;
     margin-top: 60px;
     cursor: pointer;
-}
-
-a{
-    text-decoration: none;
-    color: #9d48ff;
-    text-align: center;
 }
 
 #mark{
@@ -125,4 +115,46 @@ a{
 
 #mark input{
     margin-right: 10px;
+}
+
+@media  screen and (max-width:568px) {
+    body{
+        background-color: #fff;
+    }
+
+
+    main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    
+    main .esquerda{
+        display: none;
+        visibility: hidden;
+    }
+
+    main .textos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    form{
+        width: 60%;
+        padding: 4rem;
+    }
+
+    #btn{
+        align-items: center;
+        width: 60%;
+        height: 40px;
+        margin-top: 60px;
+        cursor: pointer;
+    }
 }
